@@ -4,14 +4,17 @@
   "description": "",
   "main": "dist/src/index.js",
   "scripts": {
-    "start": "npm run build && node dist/src/index.js",
+    "start": "node dist/src/index.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/index.ts",
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:wc": "jest --watch --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "format:check": "prettier --check --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "author": "Magnun A V F",
   "license": "MIT",
